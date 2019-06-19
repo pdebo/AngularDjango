@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AlterField(
-            model_name='article',
+            model_name='article-page',
             name='date',
             field=unixtimestampfield.fields.UnixTimeStampField(auto_now_add=True),
         ),

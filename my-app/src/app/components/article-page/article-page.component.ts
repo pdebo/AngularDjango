@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {ArticleService} from '../../services/article.service';
+import {ArticleService} from '../../services/article/article.service';
 import {AppConstants} from '../../constants';
 
 @Component({
   selector: 'app-article',
-  templateUrl: './article.component.html',
-  styleUrls: ['./article.component.css']
+  templateUrl: './article-page.component.html',
+  styleUrls: ['./article-page.component.css']
 })
-export class ArticleComponent implements OnInit {
+export class ArticlePageComponent implements OnInit {
 
   private article;
   private title;

@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {ArticlesPageComponent} from './components/articles-page/articles-page.component';
-import {ArticleComponent} from './components/article/article.component';
+import {FirstPageComponent} from './components/first-page/first-page.component';
+import {ArticlePageComponent} from './components/article-page/article-page.component';
 
-const routes: Routes = [{ path: '', component: ArticlesPageComponent },
-  { path: 'article/:articleId', component: ArticleComponent }];
+const routes: Routes = [{ path: '', component: FirstPageComponent },
+  { path: 'article-page/:articleId', component: ArticlePageComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {

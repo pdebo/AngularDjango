@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.RemoveField(
-            model_name='article',
+            model_name='article-page',
             name='Date',
         ),
         migrations.RemoveField(
@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
             name='Date',
         ),
         migrations.AddField(
-            model_name='article',
+            model_name='article-page',
             name='date',
             field=unixtimestampfield.fields.UnixTimeStampField(default=0),
             preserve_default=False,

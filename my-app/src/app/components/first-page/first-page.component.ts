@@ -1,20 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import {ArticleService} from '../../services/article.service';
+import {ArticleService} from '../../services/article/article.service';
 import {AppConstants} from '../../constants';
+import {AssociateService} from '../../services/associate/associate.service';
 
 @Component({
   selector: 'app-articles-page',
-  templateUrl: './articles-page.component.html',
-  styleUrls: ['./articles-page.component.css']
+  templateUrl: './first-page.component.html',
+  styleUrls: ['./first-page.component.css']
 })
-export class ArticlesPageComponent implements OnInit {
+export class FirstPageComponent implements OnInit {
 
   private title: string;
   private url: string;
   private articles = [];
   private associates = [];
 
-  constructor(private api: ArticleService) {
+  constructor(private articleApi: ArticleService,
+              private associateApi: AssociateService) {
     this.getArticles();
     this.getAssociates();
     this.title = AppConstants.websiteTitle;
@@ -22,7 +24,7 @@ export class ArticlesPageComponent implements OnInit {
   }
   ngOnInit(): void {}
   getArticles = () => {
-    this.api.getAllArticles().subscribe(
+    this.articleApi.getAllArticles().subscribe(
       data => {
         this.articles = data.results;
       },
@@ -32,7 +34,7 @@ export class ArticlesPageComponent implements OnInit {
     );
   }
   getAssociates = () => {
-    this.api.getAllAssociates().subscribe(
+    this.associateApi.getAllAssociates().subscribe(
       data => {
         this.associates = data.results;
       },
@@ -40,8 +42,5 @@ export class ArticlesPageComponent implements OnInit {
         console.log(error);
       }
     );
-  }
-  imageUrl(imageName: string): string{
-    return AppConstants.imageUrl(imageName);
   }
 }

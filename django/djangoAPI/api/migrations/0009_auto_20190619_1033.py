@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
             new_name='image',
         ),
         migrations.AddField(
-            model_name='article',
+            model_name='article-page',
             name='image',
             field=models.CharField(default='http://127.0.0.1:8000/media/Standard_Image.jpg', max_length=300),
             preserve_default=False,

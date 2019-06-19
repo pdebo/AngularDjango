@@ -33,17 +33,17 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.RemoveField(
-            model_name='article',
+            model_name='article-page',
             name='date',
         ),
         migrations.AddField(
-            model_name='article',
+            model_name='article-page',
             name='Date',
             field=models.DateTimeField(default=django.utils.timezone.now),
             preserve_default=False,
         ),
         migrations.AddField(
-            model_name='article',
+            model_name='article-page',
             name='author',
             field=models.CharField(default='Pol Deborsu', max_length=64),
             preserve_default=False,
