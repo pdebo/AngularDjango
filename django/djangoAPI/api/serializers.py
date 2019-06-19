@@ -14,7 +14,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 class ArticleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Article
-        fields = ('id', 'url', 'title', 'desc', 'content', 'date', 'author')
+        fields = ('id', 'url', 'title', 'desc', 'content', 'date', 'author', 'image')
 
 class TipsSerializer(serializers.ModelSerializer):
     class Meta:
@@ -24,7 +24,7 @@ class TipsSerializer(serializers.ModelSerializer):
 class WhoAreWeSerializer(serializers.ModelSerializer):
     class Meta:
         model = WhoAreWe
-        fields = ('id', 'url', 'title', 'desc', 'content', 'pictureUrl')
+        fields = ('id', 'url', 'title', 'desc', 'content', 'image')
 
 class ImageSerializer(serializers.ModelSerializer):
     class Meta:
