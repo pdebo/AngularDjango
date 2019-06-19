@@ -2,9 +2,7 @@ from django.contrib.auth.models import User
 from rest_framework import serializers
 
 
-from djangoAPI.api.models import Tips, Article
-
-from djangoAPI.api.models import Image
+from djangoAPI.api.models import Tips, Article, WhoAreWe, Image
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -25,8 +23,8 @@ class TipsSerializer(serializers.ModelSerializer):
 
 class WhoAreWeSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Tips
-        fields = ('id', 'url', 'title', 'desc', 'content')
+        model = WhoAreWe
+        fields = ('id', 'url', 'title', 'desc', 'content', 'pictureUrl')
 
 class ImageSerializer(serializers.ModelSerializer):
     class Meta:

@@ -22,6 +22,7 @@ class WhoAreWe(models.Model):
     title = models.CharField(max_length=64)
     desc = models.CharField(max_length=300)
     content = models.CharField(max_length=3000)
+    pictureUrl = models.CharField(max_length=300)
 
 
 class Image(models.Model):
