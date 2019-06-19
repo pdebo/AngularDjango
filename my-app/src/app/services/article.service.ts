@@ -6,7 +6,7 @@ import {AppConstants} from '../constants';
 @Injectable({
   providedIn: 'root'
 })
-export class ApiService {
+export class ArticleService {
 
   baseUrl = AppConstants.baseUrl;
   httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
@@ -18,4 +18,15 @@ export class ApiService {
     return this.http.get(this.baseUrl + '/articles/',
       {headers: this.httpHeaders});
   }
+
+  getArticle(id: number): Observable<any> {
+    return this.http.get(this.baseUrl + '/articles/' + id + '/',
+      {headers: this.httpHeaders});
+  }
+
+  getAllAssociates(): Observable<any> {
+    return this.http.get(this.baseUrl + '/whoarewe/',
+      {headers: this.httpHeaders});
+  }
+
 }

@@ -1,0 +1,26 @@
+.title-margin {
+  margin: 2rem;
+}
+
+.example-card {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.example-header-image {
+  background-image: url('http://127.0.0.1:8000/media/Pol.jpg');
+  background-size: cover;
+}
+
+.fit-image {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+li {
+    list-style-type: none;
+}

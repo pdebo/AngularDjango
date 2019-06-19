@@ -1,0 +1,25 @@
+<h2 class="title has-text-centered title-margin">{{title}}</h2>
+
+<div class="card card-width">
+  <div class="card-header card-header-title">
+    <p>{{article.title}}</p>
+  </div>
+  <div class="card-content">
+    {{article.date *1000 | date:'medium'}} <br/>
+    <strong>
+      {{article.desc}} <br/> <br/>
+    </strong>
+    <figure class="image">
+      <img src="{{imageUrl(article.image)}}">
+    </figure>
+    {{article.content}} <br/>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>{{title}}</strong> by <a href="https://be.linkedin.com/in/pol-deborsu-864755161">Pol Deborsu</a>.
+    </p>
+  </div>
+</footer>

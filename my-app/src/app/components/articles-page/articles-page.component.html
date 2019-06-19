@@ -1,0 +1,79 @@
+<h2 class="title has-text-centered title-margin">{{title}}</h2>
+
+<mat-tab-group mat-stretch-tabs>
+  <mat-tab label="Life Style Articles">
+    <ul>
+      <li *ngFor = "let article of articles">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{article.title}}</mat-card-title>
+            <mat-card-subtitle>Pol Deborsu</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image class ="fit-image" src="{{imageUrl(article.image)}}">
+          <mat-card-content>
+            <p>
+              {{article.desc}}
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button [routerLink]="['/article', article.id]">Lire l'article</button>
+          </mat-card-actions>
+        </mat-card>
+      </li>
+    </ul>
+  </mat-tab>
+  <mat-tab label="Tips">
+    <section class="hero is-warning is-large">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Tips from the website {{title}}
+          </h1>
+          <h2 class="subtitle">
+            An innovative website
+          </h2>
+        </div>
+      </div>
+    </section>
+  </mat-tab>
+  <mat-tab label="About us">
+    <section class="hero is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            About the website {{title}}
+          </h1>
+          <h2 class="subtitle">
+            An innovative website
+          </h2>
+        </div>
+      </div>
+    </section>
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container" *ngFor="let associate of associates">
+          <div class="columns">
+            <div class="column">
+              <figure class="image is-square">
+                <img src="{{imageUrl(associate.image)}}">
+              </figure>
+            </div>
+            <div class="column">
+              <h2 class="title">{{associate.title}}</h2>
+              <p>{{associate.content}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </mat-tab>
+</mat-tab-group>
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>{{title}}</strong> by <a href="https://be.linkedin.com/in/pol-deborsu-864755161">Pol Deborsu</a>.
+    </p>
+  </div>
+</footer>
+
