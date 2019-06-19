@@ -5,6 +5,9 @@ from rest_framework import viewsets
 from djangoAPI.api.models import Article
 from djangoAPI.api.serializers import ArticleSerializer, UserSerializer
 
+from djangoAPI.api.models import Tips, WhoAreWe
+from djangoAPI.api.serializers import TipsSerializer, WhoAreWeSerializer
+
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -16,3 +19,11 @@ class UserViewSet(viewsets.ModelViewSet):
 class ArticleViewSet(viewsets.ModelViewSet):
     queryset = Article.objects.all()
     serializer_class = ArticleSerializer
+
+class TipsViewSet(viewsets.ModelViewSet):
+    queryset = Tips.objects.all()
+    serializer_class = TipsSerializer
+
+class WhoAreWeViewSet(viewsets.ModelViewSet):
+    queryset = WhoAreWe.objects.all()
+    serializer_class = WhoAreWeSerializer
