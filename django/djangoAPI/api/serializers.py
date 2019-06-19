@@ -4,6 +4,8 @@ from rest_framework import serializers
 
 from djangoAPI.api.models import Tips, Article
 
+from djangoAPI.api.models import Image
+
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -25,3 +27,8 @@ class WhoAreWeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Tips
         fields = ('id', 'url', 'title', 'desc', 'content')
+
+class ImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Image
+        fields = "__all__"
