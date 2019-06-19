@@ -4,6 +4,7 @@ cd ~/Documents/Website_Project/AngularDjango/django
 source venv/bin/activate
 python manage.py runserver
 
-Second part
+Second part:
+
 cd ~/Documents/Website_Project/AngularDjango/my-app
 ng serve --poll=2000
